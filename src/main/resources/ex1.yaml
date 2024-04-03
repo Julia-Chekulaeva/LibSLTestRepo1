@@ -1,0 +1,9 @@
+A:
+  B: 8
+  C:
+    D:
+      - E1: "abc"
+        F1: abc
+      - E2: "abc"
+        F2: abc
+    G: 6
