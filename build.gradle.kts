@@ -1,5 +1,6 @@
 plugins {
     kotlin("jvm") version "1.9.23"
+    `maven-publish`
 }
 
 group = "org.example"
@@ -11,7 +12,7 @@ repositories {
 
 dependencies {
     implementation("org.yaml:snakeyaml:2.0")
-    //implementation("me.cat_p:LibSLDynamicAnalysis:instrumentAgent:41eaa78")
+    //implementation("me.cat.progger:instrumentAgent:v0.1")
     testImplementation("org.jetbrains.kotlin:kotlin-test")
 }
 
@@ -20,4 +21,12 @@ tasks.test {
 }
 kotlin {
     jvmToolchain(19)
+}
+
+publishing {
+    publications {
+        create<MavenPublication>(name) {
+            from(components["java"])
+        }
+    }
 }
