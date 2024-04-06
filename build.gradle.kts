@@ -12,7 +12,6 @@ repositories {
 
 dependencies {
     implementation("org.yaml:snakeyaml:2.0")
-    //implementation("me.cat.progger:instrumentAgent:v0.1")
     testImplementation("org.jetbrains.kotlin:kotlin-test")
 }
 

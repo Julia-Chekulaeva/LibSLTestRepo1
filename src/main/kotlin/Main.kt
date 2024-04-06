@@ -1,7 +1,6 @@
 package org.example
 
 import org.yaml.snakeyaml.Yaml
-import java.io.File
 
 fun main() {
     val yaml = Yaml()
@@ -18,5 +17,7 @@ A:
 """
     val inputStream = content.byteInputStream()//File("src/resources/ex1.yaml").inputStream()
     val data: Map<String, Any> = yaml.load(inputStream)
-    println(data)
+    val strData = yaml.dump(data)
+    println("data.toString() = $data")
+    println("yaml.dump(data) = $strData")
 }
